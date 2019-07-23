@@ -106,6 +106,8 @@ class AppointmentController {
       { locale: pt }
     );
 
+    console.log(user.name, formattedDate, provider_id)
+
     await Notification.create({
       content: `Novo agendamento de ${user.name} para ${formattedDate}`,
       user: provider_id
